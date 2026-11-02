@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reel World Movies</title>
+
+  <style>
+       body {
+      margin: 0;
+      background-color: #15111f;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 22px 8%;
+      background-color: #211a30;
+      border-bottom: 2px solid #f2b84b;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #f2b84b;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-bottom: 0;
+      color: #d3cede;
+    }
+
+    nav {
+      padding: 15px;
+      background-color: #332746;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #f2b84b;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    /* Featured movie */
+    .featured {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 25px;
+      background-color: #292137;
+      border-radius: 12px;
+    }
+
+    .featured img {
+      width: 220px;
+      height: 300px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .featured h2 {
+      color: #f2b84b;
+    }
+
+    .rating {
+      color: #ffd166;
+      font-weight: bold;
+    }
+
+    /* Movie cards */
+    .movie-section h2 {
+      margin-top: 40px;
+      color: #f2b84b;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .movie-card {
+      overflow: hidden;
+      background-color: #292137;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px #0005;
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .movie-info {
+      padding: 16px;
+    }
+
+    .movie-info h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .genre {
+      color: #f2b84b;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .details {
+      color: #c6c0d0;
+      font-size: 14px;
+    }
+
+    .review {
+      padding: 10px;
+      background-color: #211a30;
+      border-left: 3px solid #f2b84b;
+      color: #ded8e6;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #211a30;
+      color: #d3cede;
+      text-align: center;
+    }
+
+    /* Layout for tablets */
+    @media (max-width: 800px) {
+      .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Layout for phones */
+    @media (max-width: 550px) {
+      nav a {
+        display: inline-block;
+        margin: 7px;
+      }
+
+      .featured {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .featured img {
+        width: 100%;
+      }
+
+      .movie-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>REEL WORLD</h1>
+    <p>Discover your next favorite movie</p>
+  </header>
+
+  <nav>
+    <a href="#featured">Featured</a>
+    <a href="#action">Action</a>
+    <a href="#adventure">Adventure</a>
+    <a href="#drama">Drama</a>
+  </nav>
+
+  <main>
+
+    <!-- Featured movie -->
+    <section class="featured" id="featured">
+      <img
+        src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80"
+        alt="Movie theater with a large screen"
+      >
+
+      <div>
+        <p class="genre">This week's spotlight</p>
+        <h2>The Last Horizon</h2>
+        <p>
+          A young explorer sets out on a dangerous journey to find
+          a lost city hidden beyond the mountains.
+        </p>
+        <p><strong>Release date:</strong> 18 July 2026</p>
+        <p><strong>Cast:</strong> Emma Stone, Daniel Kaluuya</p>
+        <p class="rating">★ 8.7 / 10</p>
+      </div>
+    </section>
+
+    <!-- Movie cards -->
+    <section class="movie-section" id="action">
+      <h2>Now Showing</h2>
+
+      <div class="movie-grid">
+
+        <article class="movie-card">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+            alt="Mountain landscape movie poster"
+          >
+          <div class="movie-info">
+            <p class="genre">Adventure · 2026</p>
+            <h3>Beyond the Mountains</h3>
+            <p><strong>Release:</strong> 12 June 2026</p>
+            <p><strong>Cast:</strong> Aisha Khan, Leo James</p>
+            <p>A group of friends cross a wild landscape to find their way home.</p>
+            <p class="rating">★ 8.4 / 10</p>
+            <p class="review">“A beautiful adventure from beginning to end.” — Movie Weekly</p>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <img
+            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=80"
+            alt="Stars at night"
+          >
+          <div class="movie-info">
+            <p class="genre">Science Fiction · 2026</p>
+            <h3>Stars Between Us</h3>
+            <p><strong>Release:</strong> 24 May 2026</p>
+            <p><strong>Cast:</strong> Maya Chen, Omar Lewis</p>
+            <p>Two astronauts search for a new home among the stars.</p>
+            <p class="rating">★ 9.1 / 10</p>
+            <p class="review">“A moving story with a spectacular setting.” — Film Review</p>
+          </div>
+        </article>
+
+        <article class="movie-card" id="drama">
+          <img
+            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=80"
+            alt="Sunrise over a peaceful landscape"
+          >
+          <div class="movie-info">
+            <p class="genre">Drama · 2026</p>
+            <h3>Morning Light</h3>
+            <p><strong>Release:</strong> 3 April 2026</p>
+            <p><strong>Cast:</strong> Sofia Park, James Miller</p>
+            <p>A family finds new hope after returning to their old hometown.</p>
+            <p class="rating">★ 7.9 / 10</p>
+            <p class="review">“A warm film about family and fresh starts.” — The Cinema Guide</p>
+          </div>
+        </article>
+
+        <article class="movie-card" id="adventure">
+          <img
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80"
+            alt="Ocean and coastline"
+          >
+          <div class="movie-info">
+            <p class="genre">Action · 2026</p>
+            <h3>Ocean Run</h3>
+            <p><strong>Release:</strong> 15 March 2026</p>
+            <p><strong>Cast:</strong> Noah Reed, Priya Das</p>
+            <p>A boat crew races across the ocean to deliver a vital message.</p>
+            <p class="rating">★ 8.2 / 10</p>
+            <p class="review">“Fast, exciting, and fun to watch.” — Screen Today</p>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=700&q=80"
+            alt="Sunlight shining through a forest"
+          >
+          <div class="movie-info">
+            <p class="genre">Mystery · 2026</p>
+            <h3>The Hidden Forest</h3>
+            <p><strong>Release:</strong> 9 February 2026</p>
+            <p><strong>Cast:</strong> Ella Brooks, Amir Shah</p>
+            <p>A curious photographer investigates a strange forest town.</p>
+            <p class="rating">★ 8.0 / 10</p>
+            <p class="review">“A clever mystery with plenty of surprises.” — Movie Weekly</p>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=80"
+            alt="Mountain lake surrounded by trees"
+          >
+          <div class="movie-info">
+            <p class="genre">Family · 2026</p>
+            <h3>Summer by the Lake</h3>
+            <p><strong>Release:</strong> 20 January 2026</p>
+            <p><strong>Cast:</strong> Ruby Adams, Ben Carter</p>
+            <p>Two cousins spend a summer making memories by the lake.</p>
+            <p class="rating">★ 7.6 / 10</p>
+            <p class="review">“A charming film for the whole family.” — The Cinema Guide</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Reel World · Movie information and reviews are examples</p>
+  </footer>
+
+</body>
+</html>

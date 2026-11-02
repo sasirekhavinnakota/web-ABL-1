@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evergreen Hospital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #26352e;
+      background: #f7f9f6;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: white;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #287456;
+      font-size: 23px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #26352e;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #287456;
+    }
+
+    .hero {
+      padding: 70px 8%;
+      background: #e6f1e9;
+    }
+
+    .hero h2 {
+      max-width: 600px;
+      margin: 0 0 12px;
+      color: #205d45;
+      font-size: clamp(34px, 6vw, 54px);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 520px;
+      color: #596b60;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 5px;
+      background: #287456;
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #205d45;
+    }
+
+    main {
+      width: min(1050px, 84%);
+      margin: 35px auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      color: #205d45;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 18px;
+      border: 1px solid #e1e8e1;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #287456;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: #59665e;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #e1e8e1;
+      text-align: left;
+    }
+
+    th {
+      background: #e6f1e9;
+      color: #205d45;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 20px;
+      border: 1px solid #e1e8e1;
+      border-radius: 8px;
+      background: white;
+    }
+
+    label {
+      display: grid;
+      gap: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid #cbd5cc;
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus, a:focus-visible, button:focus-visible {
+      outline: 3px solid #8bc3a2;
+      outline-offset: 2px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    #formMessage {
+      min-height: 24px;
+      color: #205d45;
+    }
+
+    footer {
+      padding: 22px 8%;
+      background: #205d45;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      main {
+        width: 90%;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Evergreen Hospital</h1>
+    <nav aria-label="Main navigation">
+      <a href="#departments">Departments</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#visiting">Visiting hours</a>
+      <a href="#appointment">Appointments</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Compassionate care, close to home.</h2>
+    <p>Friendly people, experienced doctors, and quality care for you and your family.</p>
+    <a class="button" href="#appointment">Request an appointment</a>
+  </section>
+
+  <main>
+    <section id="departments">
+      <h2>Our departments</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Emergency care</h3>
+          <p>Urgent medical care, available 24 hours a day.</p>
+        </article>
+        <article class="card">
+          <h3>Heart care</h3>
+          <p>Heart health services, diagnosis, and treatment.</p>
+        </article>
+        <article class="card">
+          <h3>Children’s health</h3>
+          <p>Care and support for children and their families.</p>
+        </article>
+        <article class="card">
+          <h3>Orthopedics</h3>
+          <p>Care for bones, joints, and sports injuries.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="doctors">
+      <h2>Our doctors</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Dr. Maya Patel</h3>
+          <p>Heart specialist</p>
+        </article>
+        <article class="card">
+          <h3>Dr. James Carter</h3>
+          <p>Pediatrician</p>
+        </article>
+        <article class="card">
+          <h3>Dr. Sofia Rivera</h3>
+          <p>Orthopedic specialist</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="visiting">
+      <h2>Visiting hours</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Visiting hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General wards</td>
+            <td>10:00 AM – 8:00 PM</td>
+          </tr>
+          <tr>
+            <td>Maternity ward</td>
+            <td>11:00 AM – 7:00 PM</td>
+          </tr>
+          <tr>
+            <td>Emergency department</td>
+            <td>Open 24 hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Emergency contact</h2>
+      <div class="card">
+        <p>If you need emergency medical help, call now.</p>
+        <p><strong>Emergency:</strong> <a href="tel:911">911</a></p>
+        <p><strong>Hospital:</strong> <a href="tel:+15550102020">(555) 010-2020</a></p>
+        <p>100 Greenway Road, Your City</p>
+      </div>
+    </section>
+
+    <section id="appointment">
+      <h2>Request an appointment</h2>
+      <p>Fill in the form and our team will contact you to confirm your appointment.</p>
+
+      <form id="appointmentForm">
+        <label>
+          Full name
+          <input name="name" autocomplete="name" required>
+        </label>
+
+        <label>
+          Phone number
+          <input name="phone" type="tel" autocomplete="tel" required>
+        </label>
+
+        <label>
+          Email address
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+
+        <label>
+          Choose a department
+          <select name="department" required>
+            <option value="">Select a department</option>
+            <option>Emergency care</option>
+            <option>Heart care</option>
+            <option>Children’s health</option>
+            <option>Orthopedics</option>
+          </select>
+        </label>
+
+        <label class="full-width">
+          Preferred date
+          <input name="date" type="date">
+        </label>
+
+        <label class="full-width">
+          Message (optional)
+          <textarea name="message" rows="4"></textarea>
+        </label>
+
+        <button class="button full-width" type="submit">Send appointment request</button>
+        <div class="full-width" id="formMessage" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Evergreen Hospital</strong></p>
+    <p>Emergency: <a href="tel:911">911</a> · Appointments: <a href="tel:+15550102020">(555) 010-2020</a></p>
+    <p>© 2026 Evergreen Hospital</p>
+  </footer>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      document.getElementById("formMessage").textContent =
+        "Thanks! Your appointment request has been received.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>

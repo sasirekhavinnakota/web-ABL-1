@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olive & Ember Restaurant</title>
+
+  <!-- Elegant heading and body fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+        body {
+      margin: 0;
+      background-color: #f7f3eb;
+      color: #292b22;
+      font-family: "DM Sans", Arial, sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+       header {
+      padding: 18px 8%;
+      background-color: #fffdf8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #43513a;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: #292b22;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ad7740;
+    }
+
+    
+    .hero {
+      min-height: 500px;
+      padding: 50px 8%;
+      display: flex;
+      align-items: center;
+      color: white;
+      background-image:
+        linear-gradient(90deg, #171a15bb, #171a1511),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-text {
+      max-width: 550px;
+    }
+
+    .hero h1 {
+      margin: 10px 0;
+      font-size: 58px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 20px;
+      background-color: #ad7740;
+      color: white;
+      text-decoration: none;
+    }
+
+        section {
+      padding: 65px 8%;
+    }
+
+    .section-title {
+      color: #43513a;
+      text-align: center;
+    }
+
+    .section-description {
+      margin: 0 auto 30px;
+      color: #666;
+      text-align: center;
+    }
+
+       .menu-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .menu-item {
+      padding: 15px;
+      background-color: white;
+      border: 1px solid #e5dfd3;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: #ad7740;
+      font-weight: bold;
+    }
+
+       .chef-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .chef {
+      text-align: center;
+    }
+
+    .chef img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .chef p {
+      color: #666;
+    }
+
+       .ambience {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .ambience img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+        .testimonial {
+      background-color: #43513a;
+      color: white;
+      text-align: center;
+    }
+
+    .testimonial blockquote {
+      max-width: 700px;
+      margin: 20px auto;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 25px;
+    }
+
+       .visit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+       .reservation {
+      background-color: #eee8dc;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+      background-color: white;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      font: inherit;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      border: none;
+      background-color: #43513a;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #292b22;
+      color: white;
+      text-align: center;
+    }
+
+        @media (max-width: 700px) {
+      header {
+        display: block;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .menu-list, .chef-list, .visit {
+        grid-template-columns: 1fr;
+      }
+
+      .ambience {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+   <header>
+    <div class="logo">Olive & Ember</div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#chefs">Our Chefs</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#reservation">Reservations</a>
+    </nav>
+  </header>
+
+   <div class="hero">
+    <div class="hero-text">
+      <p>FRESH FROM OUR KITCHEN</p>
+      <h1>Gather around something good.</h1>
+      <p>Seasonal ingredients, comforting recipes, and a warm seat waiting for you.</p>
+      <a class="button" href="#reservation">Reserve a Table</a>
+    </div>
+  </div>
+
+    <section id="menu">
+    <h2 class="section-title">A Taste of Our Menu</h2>
+    <p class="section-description">Freshly prepared favorites from our kitchen.</p>
+
+    <div class="menu-list">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80" alt="Fresh pasta with herbs">
+        <h3>Garden Pesto Pasta</h3>
+        <p>Basil pesto, parmesan, and toasted pine nuts.</p>
+        <p class="price">$16</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Pizza with fresh toppings">
+        <h3>Stone-Baked Pizza</h3>
+        <p>Tomato, mozzarella, basil, and handmade dough.</p>
+        <p class="price">$18</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=80" alt="Creamy mushroom risotto">
+        <h3>Wild Mushroom Risotto</h3>
+        <p>Creamy rice, mushrooms, thyme, and pecorino.</p>
+        <p class="price">$20</p>
+      </div>
+    </div>
+  </section>
+
+    <section id="chefs">
+    <h2 class="section-title">Meet Our Chefs</h2>
+    <p class="section-description">The people who bring care and creativity to every plate.</p>
+
+    <div class="chef-list">
+      <div class="chef">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80" alt="Chef Marco in the kitchen">
+        <h3>Marco Bellini</h3>
+        <p>Head Chef</p>
+      </div>
+
+      <div class="chef">
+        <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=700&q=80" alt="Chef Elena preparing food">
+        <h3>Elena Rossi</h3>
+        <p>Pasta Chef</p>
+      </div>
+
+      <div class="chef">
+        <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=700&q=80" alt="Chef James preparing a dessert">
+        <h3>James Carter</h3>
+        <p>Pastry Chef</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section>
+    <h2 class="section-title">A Place to Slow Down</h2>
+    <p class="section-description">A few views of our welcoming dining room.</p>
+
+    <div class="ambience">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Cozy restaurant dining room">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Restaurant table set for dinner">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Dinner served in a restaurant">
+    </div>
+  </section>
+
+    <section class="testimonial">
+    <h2>A Note from a Guest</h2>
+    <blockquote>
+      “The food was wonderful, and the whole evening felt special.
+      We can't wait to come back.”
+    </blockquote>
+    <p>— Sofia M., restaurant guest</p>
+  </section>
+
+   <section class="visit" id="visit">
+    <div>
+      <h2 class="section-title">Visit Us</h2>
+      <p><strong>Address:</strong> 42 Garden Lane, Brooklyn, NY</p>
+      <p><strong>Phone:</strong> (212) 555-0148</p>
+      <a class="button" href="https://maps.google.com/?q=42+Garden+Lane+Brooklyn+NY">Find us on a map</a>
+    </div>
+
+    <div>
+      <h2 class="section-title">Opening Hours</h2>
+      <p>Monday–Thursday: 11:00 AM – 9:00 PM</p>
+      <p>Friday: 11:00 AM – 10:00 PM</p>
+      <p>Saturday–Sunday: 10:00 AM – 10:00 PM</p>
+    </div>
+  </section>
+
+    <section class="reservation" id="reservation">
+    <h2 class="section-title">Reserve a Table</h2>
+    <p class="section-description">Send us your preferred date and time.</p>
+
+    <form>
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="Enter your email" required>
+
+      <label for="date">Reservation date</label>
+      <input id="date" type="date" required>
+
+      <label for="guests">Number of guests</label>
+      <select id="guests">
+        <option>1 guest</option>
+        <option>2 guests</option>
+        <option>3 guests</option>
+        <option>4 guests</option>
+        <option>5 or more guests</option>
+      </select>
+
+      <button type="submit">Request a Table</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Olive & Ember Restaurant · Good food, shared together</p>
+  </footer>
+
+</body>
+</html>
